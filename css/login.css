@@ -1,0 +1,861 @@
+@charset "utf-8";
+
+body{overflow: hidden;}
+
+#top {
+    width: 100%;
+    height: 80px;
+    padding: 40px 0 12px 0;
+}
+
+#bottom {
+    width: 100%;
+}
+
+#bottom .logo {
+    text-align: center;
+    margin: 10px;
+    height: 14px;
+    color: #888888;
+    /*width: 255px;*/
+}
+
+#main {
+    position: relative;
+    margin: 0 auto;
+    min-width: 990px;
+    width: 100%;
+    height: 400px;
+    z-index: 100;
+    border-bottom: 1px solid #ffffff;
+    background-color: #f9f9f9;
+}
+
+.login-box {
+    height: 0;
+    margin: 0 auto;
+    position: relative;
+    width: 990px;
+    zoom: 1;
+    z-index: 120;
+}
+
+#J-slide {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #f9f4ed url(../images/login/loading.gif) no-repeat center center;
+}
+
+#J-slide .slide {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 800ms ease-in-out;
+    -moz-transition: opacity 800ms ease-in-out;
+    -ms-transition: opacity 800ms ease-in-out;
+    -o-transition: opacity 800ms ease-in-out;
+    transition: opacity 800ms ease-in-out;
+}
+
+#J-slide .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.slide-number-box {
+    margin: 0px auto;
+    width: 990px;
+    height: 0px;
+    position: relative;
+    z-index: 999;
+}
+
+.slide-number {
+    padding: 5px;
+    left: 50%;
+    width: auto;
+    text-align: center;
+    bottom: 6px;
+    margin-left: -60px;
+    position: absolute;
+    border-radius: 9px;
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.slide-number a {
+    border-radius: 7px;
+    background-color: #707070;
+    margin: 0px 5px 0px 5px;
+    width: 14px;
+    height: 14px;
+    text-indent: -9999em;
+    overflow: hidden;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+
+.slide-number .slide-number-active {
+    background-color: #e87614;
+}
+
+.fn-hide, .hidden {
+    display: none
+}
+
+.pop-aliedit .container {
+    padding: 20px;
+    overflow: hidden;
+    border: 3px #a2a2a2 solid;
+    background: #f3f3f3
+}
+
+html {
+    color: #4d4d4d;
+    background: #fff
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53
+
+}
+
+input, select, textarea {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+th {
+    text-align: inherit
+}
+
+fieldset, img, a img {
+    border: 0
+}
+
+iframe {
+    display: block
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal
+}
+
+del {
+    text-decoration: line-through
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: 500
+}
+
+ol, ul {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500
+}
+
+q:before, q:after {
+    content: ''
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+ins, a {
+    text-decoration: none
+}
+
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.fn-clear {
+    zoom: 1
+}
+
+body .fn-hide {
+    display: none
+}
+
+.fn-left, .fn-right {
+    display: inline
+}
+
+.fn-left {
+    float: left
+}
+
+.fn-right {
+    float: right
+}
+
+.ui-form-item {
+    padding-left: 90px;
+    margin-bottom: 15px;
+    *zoom: 1
+}
+
+.ui-form-label {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    float: left;
+    margin-left: -70px;
+    width: 60px;
+    height: 22px;
+    *height: 24px;
+    line-height: 22px;
+    *line-height: 24px;
+    text-align: right
+}
+
+.ui-form-explain {
+    display: block;
+    padding-top: 2px;
+    color: #b2b2b2;
+    _padding-left: 4px
+}
+
+.ui-form-error .ui-form-explain {
+    color: #ff5243;
+    padding-left: 20px;
+}
+
+.ui-form-explain a {
+    color: #07f
+}
+
+.ui-form-explain a:hover {
+    color: #07f
+}
+
+.ui-input-current {
+    color: #ccc
+}
+
+.ui-input {
+    width: 170px;
+    padding: 4px 3px;
+    *padding-top: 2px;
+    border-color: #aaa #DDDDDd #ddd #AAAAAA;
+    border-width: 1px;
+    border-style: solid;
+    /*line-height: 1.2 \0;*/
+    height: 14px;
+    *height: 16px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 1px 1px 1px #ddd inset;
+    -webkit-box-shadow: 1px 1px 1px #ddd inset;
+    box-shadow: 1px 1px 1px #ddd inset
+}
+
+.ui-input:hover, .ui-input-hover {
+    border-color: #999 #CCCCCc #ccc #999999
+}
+
+.ui-input:focus {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.ui-form-error .ui-input {
+    border-color: #f00 #FF6666 #f66 #FF0000;
+    -moz-box-shadow: 1px 1px 1px #faa inset;
+    -webkit-box-shadow: 1px 1px 1px #faa inset;
+    box-shadow: 1px 1px 1px #faa inset
+}
+
+.ui-input-radio {
+    vertical-align: middle;
+    margin-right: 5px
+}
+
+.ui-button {
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    line-height: 100%;
+    text-align: left;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    zoom: 1
+}
+
+.ui-button, .ui-button .ui-button-text {
+    background-repeat: repeat-x;
+    font-family: "Microsoft YaHei";
+    outline: 0
+}
+
+.ui-button {
+    font-family: "Microsoft YaHei"
+}
+
+.ui-button:hover {
+    text-decoration: none
+}
+
+.ui-button .ui-button-text {
+    border: 0;
+    *border: 0;
+    *overflow: visible
+}
+
+body .ui-button .ui-button-text {
+    vertical-align: baseline
+}
+
+.ui-button span, .ui-button:hover span {
+    display: block;
+    float: left;
+    text-decoration: none
+}
+
+.ui-button-ok, .ui-button-ok-hover, .ui-button-cancel, .ui-button-ok-disabled, .ui-button button {
+    font-size: 14px;
+    padding: 1px
+}
+
+.ui-button-ok {
+    border: 1px #d74c00 solid;
+    background-position: -210px -153px
+}
+
+.ui-button-ok-hover, .ui-button-ok:hover {
+    padding: 1px;
+    border: 1px #e55100 solid
+}
+
+.ui-button-ok-disabled {
+    background-position: -210px -257px;
+    border: 1px #aaa solid
+}
+
+.ui-button-cancel {
+    background-position: -210px -255px;
+    border: 1px #a8a8a8 solid
+}
+
+.ui-button-ok .ui-button-text, .ui-button-ok-hover .ui-button-text, .ui-button-cancel .ui-button-text, .ui-button-ok-disabled .ui-button-text {
+    padding: 0 16px;
+    *padding-bottom: 0;
+    height: 28px;
+    line-height: 28px;
+    font-weight: bold;
+    color: #fff
+}
+
+.ui-button-ok .ui-button-text {
+    background-position: -210px -222px
+}
+
+.ui-button-ok span.ui-button-text, .ui-button-ok-hover span.ui-button-text, .ui-button-ok:hover span.ui-button-text, .ui-button-cancel span.ui-button-text {
+    padding-bottom: 3px;
+    _padding-bottom: 1px;
+    _line-height: 28px;
+    height: 25px;
+    *height: 26px
+}
+
+.ui-button-ok-hover, .ui-button-ok:hover {
+    text-decoration: none
+}
+
+.ui-button-ok-disabled .ui-button-text {
+    background: #ccc none;
+    cursor: default
+}
+
+.ui-button-ok-hover .ui-button-text, .ui-button-ok .ui-button-text:hover, .ui-button-ok:hover span.ui-button-text {
+    background-position: -210px -189px
+}
+
+.ui-button-cancel .ui-button-text {
+    background-position: -210px -255px;
+    color: #666
+}
+
+.sl-aliedit .alieditContainer, .sl-aliedit .alieditContainer embed, .sl-aliedit .alieditContainer object {
+    width: 180px;
+    height: 26px
+}
+
+.sl-aliedit .alieditContainer {
+    margin-left: -2px;
+    border-color: #eee #FFFFFf #fff #EEEEEE;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px
+}
+
+.ui-form-error .alieditContainer {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f00 #FF6666 #f66 #FF0000
+}
+
+.error-box {
+    margin: 0 auto 10px;
+    padding: 5px 10px 5px 25px;
+    width: 200px;
+    line-height: 1.6;
+    border: 1px solid #ffad77;
+    color: #f00;
+    background: #FFEEBC;
+}
+
+.logonId-tip {
+    display: none;
+    top: 0;
+    left: 101px;
+    position: absolute;
+    height: 14px;
+    padding: 3px 4px;
+    width: 170px
+}
+
+.logonId-tip-default {
+    color: #999;
+    display: block
+}
+
+.logonId-tip-current {
+    color: #ccc;
+    display: block
+}
+
+.sl-checkcode:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.sl-checkcode {
+    zoom: 1
+}
+
+.sl-checkcode-input {
+    width: 50px;
+    margin-right: 4px;
+    margin-top: 2px
+}
+
+.sl-checkcode-img {
+    float: left;
+    margin-right: 4px
+}
+
+.sl-checkcode-link {
+    float: left;
+    line-height: 30px;
+    width: 38px
+}
+
+.sl-chacha-parent {
+    position: relative
+}
+
+.sl-chacha {
+    display: block;
+    text-indent: -9999px;
+    background: #efefef;
+    width: 17px;
+    height: 17px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    left: 246px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateZ(0)
+}
+
+.sl-chacha:before, .sl-chacha:after {
+    content: "";
+    display: block;
+    *display: none;
+    display: none\0;
+    width: 3px;
+    height: 11px;
+    position: relative;
+    left: 7px;
+    top: 3px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #bcbbbb;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.sl-chacha:after {
+    top: -8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.sl-chacha:hover {
+    -webkit-box-shadow: 0 0 4px #aaa;
+    -moz-box-shadow: 0 0 4px #aaa;
+    box-shadow: 0 0 4px #aaa
+}
+
+body .placeholder {
+    color: #999
+}
+
+body ::-webkit-input-placeholder {
+    color: #999
+}
+
+body :-moz-placeholder {
+    color: #999
+}
+
+
+
+body {
+    color: #4d4d4d
+}
+
+a, a:hover {
+    color: #666
+}
+
+.copyright {
+    text-shadow: 1px 0 0 #ddd;
+    color: #666
+}
+
+.server {
+    color: #fff
+}
+
+#forgetPsw, #forgetPsw:hover {
+    color: #07f
+}
+
+.ime-disabled {
+    ime-mode: disabled
+}
+
+.umidWrapper {
+    width: 1px;
+    height: 1px;
+    display: block
+}
+
+#umFlash {
+    width: 1px;
+    height: 1px;
+    display: block
+}
+
+.error-box a, .error-box a:hover {
+    color: #07F
+}
+
+#logonId::-ms-clear {
+    display: none
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto
+}
+
+body .head-notice {
+    width: 800px;
+    margin: 5px 0 0;
+    padding: 6px 0
+}
+
+fieldset {
+    position: relative;
+    zoom: 1
+}
+
+.fn-hide {
+    display: none
+}
+
+html {
+    background: transparent
+}
+
+body, button, input, select, textarea {
+    font-family: "Microsoft YaHei"
+}
+
+.ui-login-aside {
+    width: 284px;
+    overflow: hidden;
+    color: #fff;
+    background: rgba(120, 120, 120, 0.6);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#66000000', EndColorStr='#66000000')
+}
+
+.ui-form-title {
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #BBB;
+    margin: 10px 24px 5px 24px;
+    position: relative;
+    zoom: 1
+}
+
+.ui-form-title h1 {
+    font-size: 16px;
+    line-height: 21px;
+    *display: inline;
+    _display: inline;
+    zoom: 1
+}
+
+.ui-form-title #il-tblink {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 20;
+    *z-index: -1
+}
+
+.ui-login-aside a, .ui-login-aside a:hover {
+    color: #fff
+}
+
+:root .ui-login-aside, :root #userSSOLogined {
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+
+}
+
+.server {
+    display: none
+}
+
+.login-form-cnt {
+    position: relative;
+    padding: 10px 24px 10px 24px
+}
+
+label.ui-form-label {
+    text-align: left;
+    height: auto;
+    line-height: 12px;
+    display: block;
+    padding-bottom: 8px;
+    margin: 0;
+    width: auto;
+    float: none
+}
+
+.ui-form {
+    position: relative;
+    overflow: hidden
+}
+
+.ui-form-item {
+    margin: 0;
+    padding: 0
+}
+
+.sl-aliedit {
+    position: relative
+}
+
+.fm-link {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+}
+
+.alieditContainer {
+    margin-bottom: 10px
+}
+
+.ui-input {
+    margin-bottom: 10px;
+    width: 228px;
+    border: 1px solid #a09e99;
+    font-size: 12px;
+    height: 15px;
+    padding: 7px 3px
+}
+
+.i-text-authcode {
+    width: 73px;
+    float: left
+}
+
+.sl-checkcode {
+    position: relative
+}
+
+
+
+.ui-btn-cnt {
+    margin: 10px 0
+}
+
+input.btn-login {
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    background-size: cover;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    font-weight: normal;
+    font-size: 18px;
+    background: #FAA107;
+    border: 0
+}
+
+
+.login-help-cnt a {
+    margin-right: 8px;
+}
+
+span.sl-chacha {
+    left: 210px;
+    top: 27px;
+}
+
+.sl-aliedit .alieditContainer, .sl-aliedit .alieditContainer embed, .sl-aliedit .alieditContainer object {
+    width: 236px;
+    border: 0;
+    margin-left: 0
+}
+
+.alieditContainer a.aliedit-install {
+    width: 100% !important
+}
+
+.font-alpha, .font-alpha:hover, #J_safeSignCheck label, .fm-link a, .fm-link a:hover {
+    zoom: 1;
+    filter: alpha(opacity=60);
+    -moz-opacity: .6;
+    opacity: .6
+}
+
+.login-help-cnt .font-alpha, #J_safeSignCheck label, .fm-link a {
+    display: inline-block\0
+
+}
+
+#forgetPsw, #forgetPsw:hover {
+    color: #fff
+}
+
+.sl-account {
+    position: relative
+}
+
+.sl-account .ui-form-explain {
+    display: none;
+    position: absolute;
+    bottom: 45px;
+    left: 0
+}
+
+.sl-account .ui-form-explain a, .sl-account .ui-form-explain a:hover {
+    color: #07F
+}
+
+.error-box {
+    margin: 10px auto 0 auto;
+    width: 202px;
+    padding: 5px 5px 5px 25px;
+    line-height: 1.3;
+}
+
+.sl-checkcode label {
+    display: none
+}
+
+#aliedit-tips {
+    z-index: 99
+}
+
+#J-bgsound {
+    display: none
+}
+
+.slider {}
+.slider .slider-viewport {position: relative; overflow: hidden;}
+.slider .slider-viewport .slides { margin: 0; padding: 0; width: 1000%; transition-duration: 0.8s; transform: translate3d(0px,0px,0px)}
+.slider .slider-viewport .slide { float: left; display: block;}
+.slider .slider-viewport .slide img{ width: 100%; height: 400px;}

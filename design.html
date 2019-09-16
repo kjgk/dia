@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>系统图配置</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link charset="utf-8" rel="stylesheet" href="/css/diagram.css"/>
+  <script type="text/javascript" src="/js/lodash.js"></script>
+  <script type="text/javascript" src="/js/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/js/gojs/go.js"></script>
+  <script type="text/javascript" src="/js/gojs/DataInspector.js"></script>
+  <script type="text/javascript" src="/js/diagram.js"></script>
+  <script type="text/javascript" src="/js/diagram.data.js"></script>
+</head>
+<body onload="initDesign()">
+<div class="main">
+  <input id="equipments" type="hidden" value="{}"/>
+  <input id="models" type="hidden" value="{}"/>
+  <input id="diagramId" type="hidden" value="1"/>
+  <div id="diagram"></div>
+  <div id="inspector"></div>
+  <div class="buttons">
+    <button type="button" onclick="saveDiagram()">保存</button>
+  </div>
+
+</div>
+</body>
+</html>
+
