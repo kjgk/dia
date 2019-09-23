@@ -136,7 +136,7 @@ function buildDiagramModel(diagram) {
       },
       new go.Binding("location", "pos", go.Point.parse).makeTwoWay(go.Point.stringify),
       make(go.TextBlock,
-        {font: "14px Microsoft YaHei"},
+        {font: "14px Microsoft YaHei", opacity: 0.75},
         new go.Binding("text"),
         new go.Binding("stroke", "color")
       )
@@ -171,6 +171,20 @@ function buildDiagramModel(diagram) {
     )
   );
 
+  diagram.nodeTemplateMap.add('dataPoint',
+    make(go.Node, "Auto",
+      {
+        locationObjectName: 'main',
+        locationSpot: go.Spot.Center,
+      },
+      new go.Binding("location", "pos", go.Point.parse).makeTwoWay(go.Point.stringify),
+      make(go.TextBlock,
+        {font: "14px Microsoft YaHei"},
+        new go.Binding("text"),
+        new go.Binding("stroke", "color")
+      )
+    )
+  );
 
   diagram.linkTemplate =
     make(go.Link, {
@@ -204,6 +218,10 @@ function showIfCoolingSupply(v) {
 
 function showIfCoolingRecovery(v) {
   return v.data && v.data.category === 'coolingRecovery'
+}
+
+function showIfDataPoint(v) {
+  return v.data && v.data.category === 'dataPoint'
 }
 
 function initDesign() {
@@ -261,6 +279,10 @@ function initDesign() {
           var code = node.data.code.split('_')[0]
           return equipments[code]
         }
+      },
+      "dataPoint": {
+        label: '数据点标识',
+        show: showIfDataPoint,
       },
     }
   });
